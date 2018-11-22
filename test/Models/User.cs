@@ -19,7 +19,7 @@ namespace test.Models
 
         public string Education { get; set; }
 
-        public string Photo { get; set; }
+        //public string Photo { get; set; }
 
         public string Hobby { get; set; }
 

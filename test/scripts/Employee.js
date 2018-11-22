@@ -20,7 +20,7 @@ function loadData() {
                 html += '<td>' + item.City + '</td>';
                 html += '<td>' + item.MobileNo+ '</td>';
                 html += '<td>' + item.Education + '</td>';
-                html += '<td><img src="' + item.Photo +'" height="50px" width="50px" ></td>';
+                //html += '<td><img src="' + item.Photo +'" height="50px" width="50px" ></td>';
                 
                 html += '<td>' + item.Hobby + '</td>';
                 html += '<td><a href="#" onclick="return getbyID(' + item.ID + ')">Edit</a> | <a href="#" onclick="Delele(' + item.ID + ')">Delete</a></td>';
@@ -47,7 +47,7 @@ function Add() {
         City: $('#City').val(),
         MobileNo: $('#MobileNo').val(),
         Education: $('#Education').val(),
-        Photo: $('#Photo').val(),
+        //Photo: $('#Photo').val(),
         Hobby: $('#Hobby').val()
     };
     $.ajax({
@@ -73,7 +73,7 @@ function getbyID(EmpID) {
     $('#City').css('border-color', 'lightgrey');
     $('#MobileNo').css('border-color', 'lightgrey');
     $('#Education').css('border-color', 'lightgrey');
-    $('#Photo').css('border-color', 'lightgrey');
+    //$('#Photo').css('border-color', 'lightgrey');
     $('#Hobby').css('border-color', 'lightgrey');
 
     $.ajax({
@@ -88,7 +88,7 @@ function getbyID(EmpID) {
             $('#City').val(result.City);
             $('#MobileNo').val(result.MobileNo);
             $('#Education').val(result.Education);
-            $('#Photo').val(result.Photo);
+            //$('#Photo').val(result.Photo);
             $('#Hobby').val(result.Hobby);
 
 
@@ -116,7 +116,7 @@ function Update() {
         City: $('#City').val(),
         MobileNo: $('#MobileNo').val(),
         Education: $('#Education').val(),
-        Photo: $('#Photo').val(),
+        //Photo: $('#Photo').val(),
         Hobby: $('#Hobby').val()
     };
     $.ajax({
@@ -134,7 +134,8 @@ function Update() {
             $('#City').val("");
             $('#MobileNo').val("");
             $('#Education').val("");
-            $('#Photo').val("");
+
+            //$('#Photo').val("");
             $('#Hobby').val("");
         },
         error: function (errormessage) {
@@ -173,7 +174,7 @@ function clearTextBox() {
     $('#City').val("");
     $('#MobileNo').val("");
     $('#Education').val("");
-    $('#Photo').val("");
+    //$('#Photo').val("");
     $('#Hobby').val("");
     $('#btnUpdate').hide();
     $('#btnAdd').show();
@@ -182,7 +183,7 @@ function clearTextBox() {
     $('#City').css('border-color', 'lightgrey');
     $('#MobileNo').css('border-color', 'lightgrey');
     $('#Education').css('border-color', 'lightgrey');
-    $('#Photo').css('border-color', 'lightgrey');
+    //$('#Photo').css('border-color', 'lightgrey');
     $('#Hobby').css('border-color', 'lightgrey');
 }
 //Valdidation using jquery  
@@ -229,20 +230,20 @@ function validate() {
     else {
         $('#Education').css('border-color', 'lightgrey');
     }
-    if ($('#Photo').val().trim() == "") {
-        $('#Photo').css('border-color', 'Red');
-        isValid = false;
-    }
-    else {
-        $('#Photo').css('border-color', 'lightgrey');
-    }
+    //if ($('#Photo').val().trim() == "") {
+    //    $('#Photo').css('border-color', 'Red');
+    //    isValid = false;
+    //}
+    //else {
+    //    $('#Photo').css('border-color', 'lightgrey');
+    //}
 
     if ($('#Hobby').val().trim() == "") {
         $('#Hobby').css('border-color', 'Red');
         isValid = false;
     }
     else {
-        $('#Photo').css('border-color', 'lightgrey');
+        $('#Hobby').css('border-color', 'lightgrey');
     }
     return isValid;
 }  

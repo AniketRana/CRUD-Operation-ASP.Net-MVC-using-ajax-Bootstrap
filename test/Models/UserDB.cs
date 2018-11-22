@@ -43,7 +43,7 @@ namespace test.Models
                         MobileNo = rdr["MobileNo"].ToString(),
                         Education = rdr["Education"].ToString(),
 
-                        Photo = rdr["Photo"].ToString(),
+                        //Photo = rdr["Photo"].ToString(),
 
                         Hobby = rdr["Hobby"].ToString(),
 
@@ -68,7 +68,7 @@ namespace test.Models
                 com.Parameters.AddWithValue("@City", usr.City);
                 com.Parameters.AddWithValue("@MobileNo", usr.MobileNo);
                 com.Parameters.AddWithValue("@Education", usr.Education);
-                com.Parameters.AddWithValue("@photo", usr.Photo);
+                //com.Parameters.AddWithValue("@photo", usr.Photo);
                 com.Parameters.AddWithValue("@Hobby", usr.Hobby);
                 com.Parameters.AddWithValue("@Action", "Insert");
                 i = com.ExecuteNonQuery();
@@ -91,7 +91,7 @@ namespace test.Models
                 com.Parameters.AddWithValue("@City", usr.City);
                 com.Parameters.AddWithValue("@MobileNo", usr.MobileNo);
                 com.Parameters.AddWithValue("@Education", usr.Education);
-                com.Parameters.AddWithValue("@photo", usr.Photo);
+                //com.Parameters.AddWithValue("@photo", usr.Photo);
                 com.Parameters.AddWithValue("@Hobby", usr.Hobby);
                 com.Parameters.AddWithValue("@Action", "Update");
                 i = com.ExecuteNonQuery();
